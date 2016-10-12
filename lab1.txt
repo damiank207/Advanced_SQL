@@ -72,13 +72,13 @@ zad 3c
 select EMPLOYEE_ID,FIRST_NAME,LAST_NAME, HIRE_DATE  from hr.employees 
 
 zad4a 
-select 'Bartosz Szewczyk' from hr.Employees
+select 'Bartosz Szewczyk' from hr.Employees WHERE ROWNUM = 1
 
 Zad 5a
-select SYSDATE  from hr.Employees
+select SYSDATE  from hr.Employees WHERE ROWNUM = 1
 
 zad 5b
-select SYSDATE+1  from hr.Employees
+select SYSDATE+1  from hr.Employees WHERE ROWNUM = 1
 
 zad6a
 SELECT EMPLOYEE_ID,FIRST_NAME,LAST_NAME,SALARY,COMMISSION_PCT FROM hr.employees 
