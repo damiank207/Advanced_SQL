@@ -1,0 +1,85 @@
+
+
+Kr
+zysztof Karpio
+Oracle - æwiczenia 0.txt
+=====================================================================
+Laboratorium 0:
+=====================================================================
+0. Uruchom przegl¹darkê internetow¹ i po³acz siê z nastêpuj¹cym
+adresem:
+http://WinXPyy:8080/apex
+yy - podany numer.
+Po po³¹czeniu zaloguj siê. login: hr has³o: hr
+Wybierz "SQL", a nastêpnie "SQL Commands"
+=====================================================================
+1a. Wyœwiet wszystkie dane z tabeli Employees (wiersze oraz kolumny w
+kolejnoœci takiej jak zdefiniowano w tabeli).
+1b. Odczytaj i zanotuj iloœæ wierszy w tabeli Employees. Upewnij siê,
+¿e na pewno wszystkie rekordy s¹ wyœwietlone (powinno ich byæ
+ponad 100).
+1c. Zmieñ wielkoœæ liter w klauzuli SELECT. Czy wp³ynê³o to na
+dzia³anie kwerendy i/lub na wynik zapytania?
+1d. Zmieñ wielkoœæ liter w nazwie tabeli i klauzuli FROM. Czy
+wp³ynê³o to na dzia³anie kwerendy i/lub na wynik zapytania?
+1e. Wyœwietl kolejno w podobny jak wy¿ej sposób dane z pozosta³ych
+tabel zgodnie ze schematem. Zanotuj iloœæ rekordów w ka¿dej z
+tabel.
+---------------------------------------------------------------------
+2a. Wyœwietl numer pracownika, imiê i nazwisko (kolumny: employee_id,
+first_name, last_name) z tabeli Employeee.
+2b. SprawdŸ, czy wielkoœæ liter w nazwach kolumn ma znaczenie.
+3c. Zmieñ powy¿sz¹ kwerendê, tak aby wyœwietlana by³a równie¿ data
+zatrudnienia (kolumna: hire_dat). Zwróc uwagê na format w jakim
+wyœwietlane s¹ daty.
+---------------------------------------------------------------------
+4a. Przy pomocy klauzuli SELECT wyœwietl swoje imiê i nazwisko
+oddzielone od siebie spacj¹.
+4b. SprawdŸ, czy wielkoœæ liter w imieniu i nazwisku jakie podajesz
+s¹ odzwierciedlone w wyniku.
+---------------------------------------------------------------------
+5a. Korzystaj¹c z funkcji SYSDATE wyœwietl bie¿¹c¹ datê.
+5b. Zmodyfikuj powy¿sz¹ kwerendê, tak aby wyœwietlana by³a data
+jutrzejsza.
+---------------------------------------------------------------------
+6a. Wyœwietl z tabeli Employees dane pracowników (numer, imiê,
+nazwisko) oraz zarobki, roczne zarobki i kwotê prowizji (liczba
+pojawi siê u tych pracowników, którzy maj¹ prowizjê).
+=====================================================================
+Strona 1
+Created with Print2PDF. To remove this line, buy a license
+at:
+http://www.software602.com/
+
+ODP.
+
+zad 1a
+SELECT * FROM hr.employees 
+
+zad 2b
+SELECT count(*) FROM hr.employees 
+
+zad 1e 
+SELECT * FROM ALL_TABLES; 
+SELECT count(*) FROM ALL_TABLES; 
+
+zad2a
+select EMPLOYEE_ID,FIRST_NAME,LAST_NAME  from hr.employees 
+
+zad 2b nie ma
+
+zad 3c
+select EMPLOYEE_ID,FIRST_NAME,LAST_NAME, HIRE_DATE  from hr.employees 
+
+zad4a 
+select 'Bartosz Szewczyk' from hr.Employees
+
+Zad 5a
+select SYSDATE  from hr.Employees
+
+zad 5b
+select SYSDATE+1  from hr.Employees
+
+zad6a
+SELECT EMPLOYEE_ID,FIRST_NAME,LAST_NAME,SALARY,COMMISSION_PCT FROM hr.employees 
+
